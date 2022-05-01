@@ -1,0 +1,13 @@
+<header class="header">
+  <div class="logo-box">
+    <a href="/" class="logo-link">
+      <img src="/assets/images/logo.svg" alt="logo" class="logo" />
+    </a>
+  </div>
+  <app-nav [isActive]="openMenu"></app-nav>
+  <button (click)="openMenu = !openMenu" class="btn btn-toggle" type="button">
+    <span class="btn-div"></span>
+    <span class="btn-div"></span>
+    <span class="btn-div"></span>
+  </button>
+</header>

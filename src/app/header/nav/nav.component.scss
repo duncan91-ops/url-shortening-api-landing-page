@@ -1,0 +1,102 @@
+@import "../../../sass/abstracts/variables";
+
+.nav {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  width: 84%;
+  transform: translateY(100%);
+  background-color: $color-primary-dark;
+  z-index: 2;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+
+  &.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.items {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  border-bottom: 1px solid rgba($color-neutral-light-1, 0.3);
+  padding-bottom: 3rem;
+}
+
+.link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.btn-login {
+  color: #fff;
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.btn-login,
+.btn-signup {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    width: 80%;
+    left: 10%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :host {
+    width: 100%;
+  }
+
+  .nav,
+  .nav.active {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // align-items: center;
+    position: relative;
+    left: 0;
+    width: 100%;
+    transform: translateY(0);
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    z-index: 1;
+  }
+
+  .link,
+  .btn-login {
+    color: $color-neutral-light-2;
+  }
+
+  .btn-login,
+  .btn-signup {
+    padding: 0.8rem 3rem;
+  }
+
+  .items,
+  .btns {
+    flex-direction: row;
+    border-bottom: none;
+    padding: 0;
+  }
+}

@@ -1,0 +1,30 @@
+.btn {
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-primary {
+  padding: 12px 40px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.8rem;
+  border-radius: 100px;
+  font-family: $font-primary;
+}
+
+.btn-secondary {
+  border-radius: 5px;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 700;
+  font-family: $font-primary;
+}
+
+.btn-cyan {
+  background-color: $color-primary-light;
+}
