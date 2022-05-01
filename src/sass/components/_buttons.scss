@@ -1,9 +1,11 @@
 .btn {
   border: none;
   background-color: transparent;
+  transition: all 0.3s ease-in;
 
   &:hover {
     cursor: pointer;
+    opacity: 0.5;
   }
 }
 

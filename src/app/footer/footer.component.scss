@@ -36,6 +36,11 @@
 .link,
 .sublink {
   text-decoration: none;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    color: $color-primary-light;
+  }
 }
 
 .link {
@@ -51,6 +56,18 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+.social-link {
+  &:hover {
+    .social-img path {
+      fill: $color-primary-light;
+    }
+  }
+}
+
+.social-img path {
+  transition: all 0.3s ease-in;
 }
 
 @media screen and (min-width: 1200px) {

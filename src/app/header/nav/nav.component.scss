@@ -33,6 +33,11 @@
   text-decoration: none;
   color: #fff;
   font-weight: 700;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    color: $color-primary-light;
+  }
 }
 
 .btns {
@@ -86,6 +91,11 @@
   .link,
   .btn-login {
     color: $color-neutral-light-2;
+    transition: all 0.3s ease-in;
+  }
+
+  .link:hover {
+    color: $color-primary-dark;
   }
 
   .btn-login,
