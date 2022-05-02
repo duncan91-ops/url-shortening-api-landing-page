@@ -79,6 +79,39 @@
   width: 100%;
 }
 
+.links {
+  width: 84%;
+  margin: -5rem auto 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.link {
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.long {
+  padding: 2rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 1.8rem;
+}
+
+.link-details {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-top: 1px solid rgba($color-neutral-light-1, 1);
+}
+
+.short {
+  color: $color-primary-light;
+}
+
 .section-stats {
   padding: 0 8%;
 }
@@ -236,6 +269,10 @@
     width: 25rem;
     border-radius: 10px;
     font-size: 2rem;
+  }
+
+  .links {
+    width: 80%;
   }
 
   .section-stats {

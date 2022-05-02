@@ -5,6 +5,9 @@
 
   &:hover {
     cursor: pointer;
+  }
+
+  &:not(&-cyan):hover {
     opacity: 0.5;
   }
 }
@@ -29,4 +32,8 @@
 
 .btn-cyan {
   background-color: $color-primary-light;
+
+  &:hover {
+    background-color: lighten($color-primary-light, 25%);
+  }
 }

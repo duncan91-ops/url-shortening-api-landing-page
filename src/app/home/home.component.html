@@ -17,16 +17,34 @@
     </div>
   </section>
   <section class="section-content">
-    <form class="form">
+    <form [formGroup]="form" (ngSubmit)="submit()" class="form">
       <input
         type="text"
         class="form-input"
+        formControlName="url"
+        name="url"
         placeholder="Shorten a link here..."
       />
-      <button class="btn btn-secondary btn-cyan shorten-btn">
+      <button type="submit" class="btn btn-secondary btn-cyan shorten-btn">
         Shorten It!
       </button>
     </form>
+    <ng-container *ngIf="links$ | async as links">
+      <div class="links" *ngIf="links.length">
+        <div class="link" *ngFor="let link of links">
+          <p class="long">{{ link.result.original_link }}</p>
+          <div class="link-details">
+            <p class="short">{{ link.result.full_short_link }}</p>
+            <button
+              (click)="copyToClipboard(link.result.full_short_link)"
+              class="btn btn-secondary btn-cyan btn-copy"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
     <section class="section-stats">
       <h2 class="heading-secondary stats-title">Advanced Statistics</h2>
       <p class="stats-msg">
