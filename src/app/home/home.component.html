@@ -21,10 +21,12 @@
       <input
         type="text"
         class="form-input"
+        [ngClass]="error && 'err'"
         formControlName="url"
         name="url"
         placeholder="Shorten a link here..."
       />
+      <span class="error" *ngIf="error">{{ error }}</span>
       <button type="submit" class="btn btn-secondary btn-cyan shorten-btn">
         Shorten It!
       </button>

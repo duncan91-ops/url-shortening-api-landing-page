@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   links$!: Observable<UrlResponse[]>;
   form!: FormGroup;
   url: FormControl = new FormControl('', [Validators.required]);
+  error: string = '';
 
   constructor(
     private fb: FormBuilder,
@@ -32,6 +33,10 @@ export class HomeComponent implements OnInit {
   }
 
   submit() {
+    if (this.url.value === '') {
+      this.error = 'Please enter a url';
+      return;
+    }
     this.shortenUrlService.shortenUrl(this.url.value).subscribe((data) => {
       this.shortenUrlService.addLink(data);
       this.links$ = this.shortenUrlService.getLinks();

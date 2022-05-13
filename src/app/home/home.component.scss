@@ -49,6 +49,7 @@
 }
 
 .form {
+  position: relative;
   padding: 2rem;
   width: 84%;
   margin: 0 auto;
@@ -69,10 +70,21 @@
   border-radius: 5px;
   border: none;
 
+  &.err {
+    border: 1px solid red;
+  }
+
   &:focus {
     outline: none;
     border: none;
   }
+}
+
+.error {
+  position: absolute;
+  top: 6.5rem;
+  color: red;
+  font-size: 1rem;
 }
 
 .shorten-btn {
@@ -263,6 +275,11 @@
       font-size: 1.8rem;
       color: $color-neutral-light-2;
     }
+  }
+
+  .error {
+    top: 12rem;
+    font-size: 1.6rem;
   }
 
   .shorten-btn {
